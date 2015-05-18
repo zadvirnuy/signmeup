@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/global.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SignMeUp</title>
+	</head>
+	<body>
+		<!--Page Wrapper Start-->
+		<div id="wrapper">
+
+				<!--Content Area Start-->
+				<div id="content">
+					<div class="splash">
+						<div class="logo-section">
+							<img src="img/logo.png" alt="LOGO" title="SignMeUp" />
+						</div>
+						<span class="descp">Registration and authentication made easy.</span>
+					</div>
+				</div>
+				     <p><a href="" class="topcoat-button" id="scan">SCAN</a></p><br/>
+            <p><a href="" class="topcoat-button" id="encode">ENCODE</a></p>
+				<!--Content Area End-->
+
+				<!--Footer Section Start-->
+				<footer id="footer" class="bottom-btn bottom-btn2">
+					<a href="create-account.html" alert("hello")>Create An Account</a>
+					<a href="sign-in.html">Sign in</a>
+				</footer>
+				<!--Footer Section End-->
+
+		</div>
+		<!--Page Wrapper End-->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/site.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="http://192.168.4.76:8080/target/target-script-min.js#anonymous"></script>
+    <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    
+    <script>
+
+    		// $(document).ready(function () {
+    		// 	alert("try barcodeScanner")
+      //  		cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com", function(success) {
+      //       alert("encode success: " + success);
+      //     }, function(fail) {
+      //       alert("encoding failed: " + fail);
+      //     }
+      //   };
+      //   });
+    </script>
+	</body>
+</html>

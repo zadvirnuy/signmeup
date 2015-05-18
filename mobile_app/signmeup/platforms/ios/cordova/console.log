@@ -1,0 +1,129 @@
+2015-05-15 14:24:14.379 SignMeUp[7174:119085] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/0AD991C3-4DEF-4A11-A20A-2F2077042F2B/Library/Cookies/Cookies.binarycookies
+2015-05-15 14:24:14.863 SignMeUp[7174:119085] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 14:24:14.864 SignMeUp[7174:119085] Multi-tasking -> Device: YES, App: YES
+2015-05-15 14:24:14.896 SignMeUp[7174:119085] Unlimited access to network resources
+2015-05-15 14:24:14.906 SignMeUp[7174:119085] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-15 14:24:16.285 SignMeUp[7174:119085] Resetting plugins due to page load.
+2015-05-15 14:24:17.142 SignMeUp[7174:119085] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/97223938-2DA5-4E91-B83C-B50A78073A31/SignMeUp.app/www/index.html
+2015-05-15 14:24:21.069 SignMeUp[7174:119085] Resetting plugins due to page load.
+2015-05-15 14:24:21.105 SignMeUp[7174:119085] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/97223938-2DA5-4E91-B83C-B50A78073A31/SignMeUp.app/www/index.html
+2015-05-15 14:24:22.311 SignMeUp[7174:119085] Resetting plugins due to page load.
+2015-05-15 14:24:22.340 SignMeUp[7174:119085] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/97223938-2DA5-4E91-B83C-B50A78073A31/SignMeUp.app/www/index.html
+2015-05-15 15:03:48.105 SignMeUp[7788:130468] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/C8FD2187-BC6C-4413-9E00-7C050DDB1B7A/Library/Cookies/Cookies.binarycookies
+2015-05-15 15:03:48.316 SignMeUp[7788:130468] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 15:03:48.316 SignMeUp[7788:130468] Multi-tasking -> Device: YES, App: YES
+2015-05-15 15:03:48.328 SignMeUp[7788:130468] Unlimited access to network resources
+2015-05-15 15:03:48.340 SignMeUp[7788:130468] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-15 15:03:48.679 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:03:48.882 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:04:49.623 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:04:49.669 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:05:05.993 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:06.071 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:05:07.689 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:07.713 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:05:08.801 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:08.853 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:05:10.104 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:10.184 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:05:11.798 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:12.488 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/sign-in.html
+2015-05-15 15:05:16.720 SignMeUp[7788:130468] Resetting plugins due to page load.
+2015-05-15 15:05:16.802 SignMeUp[7788:130468] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/3C13D55A-C960-455B-86E7-C927D26FF2CA/SignMeUp.app/www/index.html
+2015-05-15 15:53:15.908 SignMeUp[9361:148413] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/98F873FE-1040-4094-A11A-5EB26BFD6ACD/Library/Cookies/Cookies.binarycookies
+2015-05-15 15:53:16.295 SignMeUp[9361:148413] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 15:53:16.296 SignMeUp[9361:148413] Multi-tasking -> Device: YES, App: YES
+2015-05-15 15:53:16.307 SignMeUp[9361:148413] Unlimited access to network resources
+2015-05-15 15:53:16.316 SignMeUp[9361:148413] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-15 15:53:16.863 SignMeUp[9361:148413] Resetting plugins due to page load.
+2015-05-15 15:53:17.037 SignMeUp[9361:148413] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/410BC8CF-4A29-4AE9-8137-4ECA2E817AC1/SignMeUp.app/www/index.html
+2015-05-18 15:50:13.868 SignMeUp[4071:40763] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/9E95EEF7-83C0-4C85-91F9-DD37E5A281CD/Library/Cookies/Cookies.binarycookies
+2015-05-18 15:50:14.469 SignMeUp[4071:40763] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-18 15:50:14.469 SignMeUp[4071:40763] Multi-tasking -> Device: YES, App: YES
+2015-05-18 15:50:14.495 SignMeUp[4071:40763] Unlimited access to network resources
+2015-05-18 15:50:14.504 SignMeUp[4071:40763] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-18 15:50:15.831 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:22.559 SignMeUp[4071:40763] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-05-18 15:50:22.560 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:22.862 SignMeUp[4071:40763] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/DF308554-06BE-4967-8BFB-1660AA041D43/SignMeUp.app/www/create-account.html
+2015-05-18 15:50:25.831 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:25.883 SignMeUp[4071:40763] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/DF308554-06BE-4967-8BFB-1660AA041D43/SignMeUp.app/www/index.html
+2015-05-18 15:50:28.710 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:28.767 SignMeUp[4071:40763] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/DF308554-06BE-4967-8BFB-1660AA041D43/SignMeUp.app/www/registered.html
+2015-05-18 15:50:32.727 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:32.790 SignMeUp[4071:40763] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/DF308554-06BE-4967-8BFB-1660AA041D43/SignMeUp.app/www/add-profile.html
+2015-05-18 15:50:35.837 SignMeUp[4071:40763] Resetting plugins due to page load.
+2015-05-18 15:50:35.858 SignMeUp[4071:40763] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/DF308554-06BE-4967-8BFB-1660AA041D43/SignMeUp.app/www/registered.html#
+2015-05-18 15:52:28.496 SignMeUp[4071:42040] Terminating since there is no system app.
+2015-05-18 17:20:56.218 SignMeUp[13096:86857] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/BBBA4CBF-7CED-4B9B-9CFF-13E4E41FCF13/Library/Cookies/Cookies.binarycookies
+2015-05-18 17:20:56.424 SignMeUp[13096:86857] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-18 17:20:56.425 SignMeUp[13096:86857] Multi-tasking -> Device: YES, App: YES
+2015-05-18 17:20:56.437 SignMeUp[13096:86857] Unlimited access to network resources
+2015-05-18 17:20:56.454 SignMeUp[13096:86857] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-18 17:20:56.708 SignMeUp[13096:86857] Resetting plugins due to page load.
+2015-05-18 17:21:01.748 SignMeUp[13096:86857] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-05-18 17:21:01.749 SignMeUp[13096:86857] Resetting plugins due to page load.
+2015-05-18 17:21:01.812 SignMeUp[13096:86857] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/C5BD59BA-659E-407A-83AF-60F0ECFE39A8/SignMeUp.app/www/registered.html
+2015-05-18 17:24:35.725 SignMeUp[13304:88698] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/FF7D06E6-6A60-4B20-940D-24F67AC4DCF0/Library/Cookies/Cookies.binarycookies
+2015-05-18 17:24:35.857 SignMeUp[13304:88698] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-18 17:24:35.857 SignMeUp[13304:88698] Multi-tasking -> Device: YES, App: YES
+2015-05-18 17:24:35.890 SignMeUp[13304:88698] Unlimited access to network resources
+2015-05-18 17:24:35.893 SignMeUp[13304:88698] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-18 17:24:36.275 SignMeUp[13304:88698] Resetting plugins due to page load.
+2015-05-18 17:25:51.617 SignMeUp[13304:88698] Finished load of: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Bundle/Application/701CE802-E203-4CD0-BEF3-4603366DFE06/SignMeUp.app/www/index.html
+2015-05-18 17:26:48.204 SignMeUp[13463:89668] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/admin/Library/Developer/CoreSimulator/Devices/B7B0940A-5700-4416-8B1A-699328613679/data/Containers/Data/Application/66BB1702-7630-4A9E-BAA0-2CFE6FC34BC8/Library/Cookies/Cookies.binarycookies
+2015-05-18 17:26:48.416 SignMeUp[13463:89668] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-18 17:26:48.417 SignMeUp[13463:89668] Multi-tasking -> Device: YES, App: YES
+2015-05-18 17:26:48.436 SignMeUp[13463:89668] Unlimited access to network resources
+2015-05-18 17:26:48.449 SignMeUp[13463:89668] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-18 17:26:49.167 SignMeUp[13463:89668] Resetting plugins due to page load.
+2015-05-18 17:28:01.963 SignMeUp[13463:90134] Terminating since there is no system app.
