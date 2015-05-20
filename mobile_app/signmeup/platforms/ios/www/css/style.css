@@ -78,7 +78,7 @@ img {
 	width: 24px;
 	position: absolute;
 	right: 15px;
-	top: 13px;
+	top: 25px;
 }
 .trust-level h2 {
 	font-size: 24px;
@@ -399,10 +399,9 @@ i.add{
 }*/
 #footer input[type=submit]{
 	width:100%;
-	background:#ff8776;
 	height: 48px;
-	line-height: 48px;
-	font-weight: 600;
+	line-height: 48px !important;
+	font-weight: 700 !important;
 	font: inherit;
 	text-align: center;
 	width: 100%;
@@ -412,13 +411,15 @@ i.add{
 	color: #fff;
 	text-transform: uppercase;
 	border-radius: 0px;
+	bottom: 0 !important;
+	border: none !important;
 }
 .scan-btn {
 	width:100%;
 	background:#ff8776;
-	height: 48px;
-	line-height: 48px;
-	font-weight: 600;
+	height: 48px !important;
+	line-height: 48px !important;
+	font-weight: 700 !important;
 	font: inherit;
 	text-align: center;
 	width: 100%;
