@@ -55,7 +55,7 @@
       function signin() {
 
       	var params = $('#content form').serialize();
-      	var server = 'http://192.168.4.47:3000' //'http://signmeup.gg'
+      	var server = 'http://192.168.4.47:3000'; //'http://signmeup.gg'
       	$.ajax({
       		url: server + '/api/v1/users/signin',
       		data: params,
@@ -65,7 +65,7 @@
       			 if (data.result == 'success') {
 	      			 localStorage.setItem('current_user', data.user.id);
 	      			 localStorage.setItem('token', data.token);
-	             window.location.href = "registered.html";
+	             window.location.href = "select-profile.html";
 	             alert('Welcome back!'); 
             }
       		},

@@ -49,7 +49,6 @@
 						</a>
 					</li>
 				</ul> -->
-				<div id="profile_show"></div>
 			</div>
 			<!--Content Area End-->
 
@@ -64,30 +63,58 @@
 		<!--Page Wrapper End-->
 		<script type="text/javascript" src="js/site.js"></script>
 		<script type="text/javascript">
-			var params = $('#content #profile_show').serialize();
-			var profiles = new Profile('profile_show', {
-			for (i=0; i < profiles.length; i++) {
-				ctx = '<ul class="profile-data" id="profile_'+ profiles[i].id +'">';
-				ctx += '<li>Profile name:' + profiles[i].profile_name + '</li>';
-				ctx += '<li>Name:' + profiles[i].name + '</li>';
-				ctx += '<li>Surame:' + profiles[i].surname + '</li>';
-				ctx += '<li>Email:' + profiles[i].email + '</li>';
-				ctx += '<li>Country:' + profiles[i].country_id + '</li>';
-				ctx += '<li>Date of Birth:' + profiles[i].date_of_birth + '</li>';
-				ctx += '</ul>';
-				$('#content .user-profiles').append(ctx);
-			}
-		});
-			$('ul.profile-data').on('click', function(){
-				var profile_id = this.id.replace('profile_','');
-				var server = 'http://signmeup.gg' //'http://signmeup.gg'
-      	$.ajax({
-      		url: server + '/api/v1/users/' + current_user + '/profiles',
-      		data: params,
-      		method: 'GET',
-      		dataType: 'JSON',
-  			});   
-			});
+
+       // var profiles = null;		
+       
+       alert('tp1');
+       current_user = localStorage.getItem('current_user');
+       // profiles = localStorage.getItem('profiles');
+       var server = 'http://192.168.4.47:3000'; //'http://signmeup.gg'
+		   $(document).ready(function() {
+
+		   		alert('in function');
+	      	$.ajax({
+	      		url: server + '/api/v1/users/' + current_user + '/profiles',
+	      		// data: params,
+	      		method: 'GET',
+	      		dataType: 'JSON',
+	      		success: function(resp) {
+	      			// if (resp.result == 'success') {
+                var ctx =  '<ul class="profile-select">';
+								for (i=0; i < resp.profiles.length; i++) {
+                    ctx += 		'<li class="private"><span>&nbsp;</span><a href="#" id="profile_' + resp.profiles[i].id ;
+                    ctx += ' onclick="sendProfile()"><strong>' + resp.profiles[i].profile_name + '</strong>';
+                    var desc = '<em>' + '<span>Name:' + resp.profiles[i].name + '&nbsp;</span>';
+                    desc +=  '<span>Surame:' + resp.profiles[i].surname + '&nbsp;</span>';
+										desc += '<span>Email:' + resp.profiles[i].email + '&nbsp;</span>';
+										desc += '<span>Country:' + resp.profiles[i].country_id + '&nbsp;</span>';
+										desc += '<span>Date of Birth:' + resp.profiles[i].date_of_birth + '&nbsp;</span></em>';
+                    ctx += desc + '</a></li>';
+										ctx += '<ul class="profile-select" id="profile_'+ resp.profiles[i].id +'">';
+									alert('tp22');	
+								}
+								ctx += '</ul>';
+								$('#content').append(ctx);
+								alert('tp3');
+	      			// }
+	      		}
+	      		// error: function() { alert(result);}
+	  			})    
+
+
+		   });
+
+       function sendProfile() {
+			   	var profile_id = this.id.replace('profile_','');
+		      $.ajax({
+	      		url: server + '/api/v1/users/' + current_user + '/profiles/' + profile_id + '/select',
+	      		data: params,
+	      		method: 'GET',
+	      		dataType: 'JSON',
+	      		success: function(resp) {}
+				  })
+		    }
+			
 		</script>
 		
 	</body>
