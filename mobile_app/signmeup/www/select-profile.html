@@ -23,7 +23,7 @@
 
 			<!--Content Area Start-->
 			<div id="content">
-				<ul class="profile-select">
+				<!-- <ul class="profile-select">
 					<li class="private">
 						<span>&nbsp;</span>
 						<a href="#">
@@ -48,19 +48,47 @@
 							<i>&nbsp;</i>
 						</a>
 					</li>
-				</ul>
+				</ul> -->
+				<div id="profile_show"></div>
 			</div>
 			<!--Content Area End-->
 
 			<!--Footer Section Start-->
 			<footer id="footer" class="bottom-btn">
-				<input type="submit" value="ADD NEW PROFILE"><i class="add">&nbsp;</i></input>
+				<!-- <input type="submit" value="ADD NEW PROFILE"><i class="add">&nbsp;</i></input> -->
+				<a href="add-profile.html">ADD NEW PROFILE</a>
 			</footer>
 			<!--Footer Section End-->
 
 		</div>
 		<!--Page Wrapper End-->
 		<script type="text/javascript" src="js/site.js"></script>
+		<script type="text/javascript">
+			var params = $('#content #profile_show').serialize();
+			var profiles = new Profile('profile_show', {
+			for (i=0; i < profiles.length; i++) {
+				ctx = '<ul class="profile-data" id="profile_'+ profiles[i].id +'">';
+				ctx += '<li>Profile name:' + profiles[i].profile_name + '</li>';
+				ctx += '<li>Name:' + profiles[i].name + '</li>';
+				ctx += '<li>Surame:' + profiles[i].surname + '</li>';
+				ctx += '<li>Email:' + profiles[i].email + '</li>';
+				ctx += '<li>Country:' + profiles[i].country_id + '</li>';
+				ctx += '<li>Date of Birth:' + profiles[i].date_of_birth + '</li>';
+				ctx += '</ul>';
+				$('#content .user-profiles').append(ctx);
+			}
+		});
+			$('ul.profile-data').on('click', function(){
+				var profile_id = this.id.replace('profile_','');
+				var server = 'http://signmeup.gg' //'http://signmeup.gg'
+      	$.ajax({
+      		url: server + '/api/v1/users/' + current_user + '/profiles',
+      		data: params,
+      		method: 'GET',
+      		dataType: 'JSON',
+  			});   
+			});
+		</script>
 		
 	</body>
 </html>

@@ -16,28 +16,28 @@
 
 			<!--Header Section Start-->
 			<header id="header">
-				<h2>Create Account</h2>
+				<h2>Sign in</h2>
 				<a href="javascript:history.go(-1)" class="edit-btn back-btn"><img src="img/back-icon.png" alt="back" /></a>
 			</header>
 			<!--Header Section End-->
 
 			<!--Content Area Start-->
 			<div id="content">
-				<form action="http://signmeup.gg/api/v1/users/signin" method="post">
+				<form action="" method="post">
 					<ul class="new-pro">
 						<li class="clearfix">
 							<label>Email</label>
-							<input type="email" placeholder="exampleemailname@gmail.com" />
+							<input type="email" name="email" placeholder="name@gmail.com" />
 						</li>
 						<li class="clearfix">
 							<label>Password</label>
-							<input type="password" placeholder="Enter your password" />
+							<input type="password" name="password" placeholder="Enter your password" />
 						</li>
 					</ul>
 
 								<!--Footer Section Start-->
 					<footer id="footer" class="bottom-btn">  <!-- bottom-btn2 -->
-						<input type="submit" value="Sign in"></input>
+						<input type="submit" value="Sign in" onclick="signin(); return false;"></input>
 					</footer>
 
 				</form>
@@ -49,6 +49,29 @@
 		</div>
 		<!--Page Wrapper End-->
 		<script type="text/javascript" src="js/site.js"></script>
-		
+		<script type="text/javascript">
+		  var  current_user = null;
+		  var token = null;
+      function signin() {
+
+      	var params = $('#content form').serialize();
+      	var server = 'http://192.168.4.47:3000' //'http://signmeup.gg'
+      	$.ajax({
+      		url: server + '/api/v1/users/signin',
+      		data: params,
+      		method: 'POST',
+      		dataType: 'JSON',
+      		success: function(data) {
+      			 if (data.result == 'success') {
+	      			 localStorage.setItem('current_user', data.user.id);
+	      			 localStorage.setItem('token', data.token);
+	             window.location.href = "registered.html";
+	             alert('Welcome back!'); 
+            }
+      		},
+      		error: function() { alert('Wrong account or password');}
+      	})
+      }
+		</script>
 	</body>
 </html>
