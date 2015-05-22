@@ -69,10 +69,9 @@
        alert('tp1');
        current_user = localStorage.getItem('current_user');
        // profiles = localStorage.getItem('profiles');
-       var server = 'http://192.168.4.47:3000'; //'http://signmeup.gg'
-		   $(document).ready(function() {
-
-		   		alert('in function');
+       var server = 'http://signmeup.gg'; //'http://signmeup.gg'
+		   //$(document).ready(function() {
+		  $( function () { 	
 	      	$.ajax({
 	      		url: server + '/api/v1/users/' + current_user + '/profiles',
 	      		// data: params,
@@ -90,12 +89,10 @@
 										desc += '<span>Country:' + resp.profiles[i].country_id + '&nbsp;</span>';
 										desc += '<span>Date of Birth:' + resp.profiles[i].date_of_birth + '&nbsp;</span></em>';
                     ctx += desc + '</a></li>';
-										ctx += '<ul class="profile-select" id="profile_'+ resp.profiles[i].id +'">';
-									alert('tp22');	
+										ctx += '<ul class="profile-select" id="profile_'+ resp.profiles[i].id +'">';	
 								}
 								ctx += '</ul>';
 								$('#content').append(ctx);
-								alert('tp3');
 	      			// }
 	      		}
 	      		// error: function() { alert(result);}
@@ -105,13 +102,24 @@
 		   });
 
        function sendProfile() {
+       		var params = $('#content form').serialize();
 			   	var profile_id = this.id.replace('profile_','');
 		      $.ajax({
 	      		url: server + '/api/v1/users/' + current_user + '/profiles/' + profile_id + '/select',
 	      		data: params,
-	      		method: 'GET',
+	      		method: 'POST',
 	      		dataType: 'JSON',
-	      		success: function(resp) {}
+	      		success: function(resp) {
+	      			for (i=0; i < resp.profiles.length; i++) {
+		      			var eml=document.getElementById(resp.profiles[i].id)[0].value;
+		      			var eml=document.getElementsByName(resp.profiles[i].profile_name)[0].value;
+		      			var eml=document.getElementsByName(resp.profiles[i].surname)[0].value;
+		      			var eml=document.getElementsByName(resp.profiles[i].email)[0].value;
+		      			var eml=document.getElementsByName(rresp.profiles[i].country_id)[0].value;
+		      			var eml=document.getElementsByName(resp.profiles[i].date_of_birth)[0].value;
+		      			alert('params are submited');
+		      		}	
+	      		}
 				  })
 		    }
 			

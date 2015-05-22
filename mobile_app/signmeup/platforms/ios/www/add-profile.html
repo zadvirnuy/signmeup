@@ -338,30 +338,51 @@
       function addProfile() {
 
       	var params = $('#content form').serialize();
-      	//params.token = token;
-      	var server = 'http://192.168.4.47:3000' ; //'http://signmeup.gg' http://192.168.4.47:3000
+      	//
+      	var server = 'http://signmeup.gg' ; //'http://signmeup.gg' http://192.168.4.47:3000
       	current_user = localStorage.getItem('current_user');
 	      token = localStorage.getItem('token');
+	      params.token = token;
       	$.ajax({
       		url: server + '/api/v1/users/' + current_user + '/profiles',
       		data: params,
       		method: 'POST',
-      		dataType: 'JSON',
+      		// dataType: 'JSON',
       		success: function(data) {
       			alert('request successed');
       			if (data.result == 'success') {
       				alert('You added new profile'); 
 	            window.location.href = "select-profile.html";
-	            alert('You added new profile'); 
+	            console.log(result);
 		        } 
 		        return false;   
       		},
-      		error: function() { 
-      			alert('error occured');
+      		// statusCode: {
+      		// 	404:function(){
+      		// 		alert(404);
+      		// 	},
+      		// 	500:function(){
+      		// 		alert(500);
+      		// 	},
+      		// 	302:function(){
+      		// 		alert(302);
+      		// 	},
+      		// 	406:function(){
+      		// 		alert(406);
+      		// 	},
+      		// 	301:function(){
+      		// 		alert(301);
+      		// 	},
+      		// },
+      		error: function(xhr, status, error) { 
+      			alert('error');
+      			console.info(result);
+      			console.error("An error occurred:", error);
       			window.location.href = "select-profile.html";
-      			alert('Be sure to feel all necessary fields');
-      		}
-
+      		},
+      		// complete: function(xhr) {
+      		// 	alert('got responce');  
+      		// },
       	});
       	//return false;
       }
