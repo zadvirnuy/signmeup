@@ -324,11 +324,13 @@
 
       	var params = $('#content form').serialize();
       	$.ajax({
-      		url: 'http://signmeup.gg/api/v1/users/signup',
+      		url: 'http://signmeup.gg/api/v1/users/signup' , //'http://192.168.4.47:3001'//'http://192.168.4.47:3001/api/v1/users/signup',
       		data: params,
       		method: 'POST',
       		dataType: 'JSON',
-      		success: function() {
+      		success: function(resp) {
+      			 localStorage.setItem('current_user', resp.user.id);
+      			 localStorage.setItem('access_token', resp.user.authentication_token);
              window.location.href = "registered.html"; 
              alert('Your account successfully registered');
       		},

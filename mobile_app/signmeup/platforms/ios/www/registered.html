@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/global.css" media="screen">
 				<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
@@ -33,7 +33,7 @@
 
             <footer id="footer" >
 					<!-- <a href="qr-code.html">Get Started</a> -->
-					<p><a href="#" class="scan-btn" id="scan">Get Started</a></p>
+					<p><a class="scan-btn" id="scan" onclick="scan()" >Get Started</a></p>
 				</footer>
 		</div>			
        
@@ -44,7 +44,14 @@
         <script src="http://192.168.7.99:8080/target/target-script-min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+		  		// $(document).ready(function(){
+		  		// 	console.log('init_registered')
+		  		// 	navigator.notification.alert(
+		    //    	'Successfully signed in', null , 'Welcome back', 'GO'
+		    //    );
+		  	
+		    //    });
+		      	app.initialize();	
         </script>
         <script>
 		// 	document.addEventListener('DOMContentLoaded', function() {
@@ -63,5 +70,16 @@
 		// 		});
 		// 	}); conflict with scanner ,need to rewrite
  		// </script>
+ 		<script type="text/javascript">
+            function resolveScanning() {
+
+             // if (result.text == 'success') { 
+             		// console.log('result',result);
+            		// alert('Pleace profile which you want to send');
+               	window.location.href = "select-profile.html";
+            // }
+            	
+            }
+        </script>
     </body>
 </html>

@@ -46,6 +46,9 @@
 		D3F051797B804712B96BA81C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B874D4D8FA4945AD96562C41 /* QuartzCore.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D6C9644C606F4E1FA5F6EF8F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B593796D2BD4D18B9C3FB2D /* libiconv.dylib */; };
+		49418DDFC3504926B4037180 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8729E3A4104F3CA04758AC /* CDVNotification.m */; };
+		70FA9355704948BCA30E2E7D /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A3F0AB7FDB4E48BF8BDBBF28 /* CDVNotification.bundle */; };
+		286A59CFB6414ADD9AE49C0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD000C836CFE4D34A788D28B /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,10 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F107A5F7F21D43F08DF21241 /* AVFoundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = SignMeUp/config.xml; sourceTree = "<group>"; };
+		FA8729E3A4104F3CA04758AC /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F187A60759B24919BC8A7A6C /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		A3F0AB7FDB4E48BF8BDBBF28 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
+		FD000C836CFE4D34A788D28B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,7 @@
 				7F2E8E2ACBB04E96A0DEB876 /* AVFoundation.framework in Frameworks */,
 				D2B637F89C49439CBE043A64 /* CoreVideo.framework in Frameworks */,
 				D3F051797B804712B96BA81C /* QuartzCore.framework in Frameworks */,
+				286A59CFB6414ADD9AE49C0D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,7 @@
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* SignMeUp-Info.plist */,
 				D79FB61AD4184CFA9ACE9CDF /* scannerOverlay.xib */,
+				A3F0AB7FDB4E48BF8BDBBF28 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = SignMeUp/Resources;
@@ -209,6 +218,7 @@
 				F107A5F7F21D43F08DF21241 /* AVFoundation.framework */,
 				5599F76D12994488B4EF29EC /* CoreVideo.framework */,
 				B874D4D8FA4945AD96562C41 /* QuartzCore.framework */,
+				FD000C836CFE4D34A788D28B /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +237,8 @@
 				8541AA74C2D24A5E92F683B6 /* CDVBarcodeScanner.mm */,
 				227F15BD127B4C6B80CAE09C /* zxing-all-in-one.cpp */,
 				C113FE84773F49FF842666F8 /* zxing-all-in-one.h */,
+				FA8729E3A4104F3CA04758AC /* CDVNotification.m */,
+				F187A60759B24919BC8A7A6C /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = SignMeUp/Plugins;
@@ -386,6 +398,7 @@
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				88739C59D82040C49F94F50A /* scannerOverlay.xib in Resources */,
+				70FA9355704948BCA30E2E7D /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +432,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				9C89AAFC5F034672AB81BFE2 /* CDVBarcodeScanner.mm in Sources */,
 				29EC7EEC84D742C98D6C2DF1 /* zxing-all-in-one.cpp in Sources */,
+				49418DDFC3504926B4037180 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +461,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "SignMeUp/SignMeUp-Info.plist";
+				INSTALL_OWNER = "$(INSTALL_OWNER)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -470,13 +485,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SignMeUp/SignMeUp-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "SignMeUp/SignMeUp-Info.plist";
+				INSTALL_OWNER = "$(INSTALL_OWNER)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",

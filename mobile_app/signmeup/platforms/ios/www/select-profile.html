@@ -63,62 +63,86 @@
 		<!--Page Wrapper End-->
 		<script type="text/javascript" src="js/site.js"></script>
 		<script type="text/javascript">
+			
+     // $(document).on('deviceready', function() {
+     // 	console.log("navigator", navigator);
+   	 //   window.new_alert = window.navigator.notification.alert;
+     //  });
 
+			// function nope() {};
+
+			alert('Scan succeeded! Select which profile you want to send')
        // var profiles = null;		
        
-       alert('tp1');
+       // alert('tp1');
        current_user = localStorage.getItem('current_user');
        // profiles = localStorage.getItem('profiles');
-       var server = 'http://signmeup.gg'; //'http://signmeup.gg'
+       var server = 'http://signmeup.gg' ; //'http://192.168.4.47:3001'
+       var profiles = null;
+       var params = {};
+       params.access_token = localStorage.getItem('access_token');
 		   //$(document).ready(function() {
 		  $( function () { 	
 	      	$.ajax({
 	      		url: server + '/api/v1/users/' + current_user + '/profiles',
-	      		// data: params,
+	      		data: params,
 	      		method: 'GET',
 	      		dataType: 'JSON',
 	      		success: function(resp) {
+	      			console.log('resp:',resp );
+	      			profiles = resp.profiles;
 	      			// if (resp.result == 'success') {
                 var ctx =  '<ul class="profile-select">';
-								for (i=0; i < resp.profiles.length; i++) {
-                    ctx += 		'<li class="private"><span>&nbsp;</span><a href="#" id="profile_' + resp.profiles[i].id ;
-                    ctx += ' onclick="sendProfile()"><strong>' + resp.profiles[i].profile_name + '</strong>';
-                    var desc = '<em>' + '<span>Name:' + resp.profiles[i].name + '&nbsp;</span>';
-                    desc +=  '<span>Surame:' + resp.profiles[i].surname + '&nbsp;</span>';
-										desc += '<span>Email:' + resp.profiles[i].email + '&nbsp;</span>';
-										desc += '<span>Country:' + resp.profiles[i].country_id + '&nbsp;</span>';
-										desc += '<span>Date of Birth:' + resp.profiles[i].date_of_birth + '&nbsp;</span></em>';
+								for (i=0; i < profiles.length; i++) {
+                    ctx += 		'<li class="private"><span>&nbsp;</span><a href="#" onclick="sendProfile(' + i + ')" id="profile_' + resp.profiles[i].id ;
+                    ctx += '"><strong>' + resp.profiles[i].profile_name + '</strong>';
+                    var desc = '<span><strong>Name:</strong>' + resp.profiles[i].name + '&nbsp;&nbsp;</span>';
+                    desc +=  '<span><strong>Surname:</strong>' + resp.profiles[i].surname + '&nbsp;&nbsp;</span>';
+										desc += '<span><strong>Email:</strong>' + resp.profiles[i].email + '&nbsp;&nbsp;</span>';
+										desc += '<span><strong>Country:</strong>' + resp.profiles[i].country_id + '&nbsp;&nbsp;</span>';
+										desc += '<span><strong>Date of Birth:</strong>' + resp.profiles[i].date_of_birth + '&nbsp;&nbsp;</span>';
                     ctx += desc + '</a></li>';
 										ctx += '<ul class="profile-select" id="profile_'+ resp.profiles[i].id +'">';	
 								}
 								ctx += '</ul>';
 								$('#content').append(ctx);
 	      			// }
-	      		}
-	      		// error: function() { alert(result);}
+	      			// url = localStorage.getItem('callback_url');
+  					},
+	      		error: function(error,xhr,status) { console.log('result:',error);}
 	  			})    
 
 
 		   });
 
-       function sendProfile() {
-       		var params = $('#content form').serialize();
-			   	var profile_id = this.id.replace('profile_','');
+       function sendProfile(idx) {
+       	  var url = localStorage.getItem('callback_url');
+  				console.log('url:',url);
+       		// var params = $('#content form').serialize();
+			   	// var profile_id = this.id.replace('profile_','');
+			   	var profile_id = profiles[idx].id;
+			   	var params = {access_token: localStorage.getItem('access_token'), id: profile_id, callback_url: url};
 		      $.ajax({
-	      		url: server + '/api/v1/users/' + current_user + '/profiles/' + profile_id + '/select',
-	      		data: params,
+	      		url: server + '/api/v1/users/' + current_user + '/profiles/send_profile?' + $.param(params),
+	      		//data: ,
 	      		method: 'POST',
 	      		dataType: 'JSON',
 	      		success: function(resp) {
-	      			for (i=0; i < resp.profiles.length; i++) {
-		      			var eml=document.getElementById(resp.profiles[i].id)[0].value;
-		      			var eml=document.getElementsByName(resp.profiles[i].profile_name)[0].value;
-		      			var eml=document.getElementsByName(resp.profiles[i].surname)[0].value;
-		      			var eml=document.getElementsByName(resp.profiles[i].email)[0].value;
-		      			var eml=document.getElementsByName(rresp.profiles[i].country_id)[0].value;
-		      			var eml=document.getElementsByName(resp.profiles[i].date_of_birth)[0].value;
-		      			alert('params are submited');
-		      		}	
+	      			// resp.profile_url
+	      			if (resp.result == 'success') {
+	      				var site = url.split('/')[1];
+	      				alert('Successfully registered to ' + site +  ' site with email ' + resp.email);
+            //     window.new_alert(
+					       // 	'Successfully registered to ' + site +  ' site with email ' + resp.email , nope , 'Sign Up succeeded', 'OK'
+					       // );
+		          }
+		          else {
+		          	alert('Errors occured: ' +resp.errors );
+		          // 	window.new_alert(
+					       // 	resp.errors , nope , 'Errors occured: ', 'OK'
+					       // );
+		          }
+
 	      		}
 				  })
 		    }

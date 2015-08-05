@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -36,6 +38,7 @@ var app = {
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
+        // window.new_alert = window.navigator.notification.alert;
         app.receivedEvent('deviceready');
     },
 
@@ -51,15 +54,15 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
-    scan: function() {
+    scan: function(run) {
         alert('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
 
-            alert("We got a barcode\n" + 
-            "Result: " + result.text);      // + "\n" + 
+            // alert("We got a barcode\n" + 
+            // "Result: " + result.text);      // + "\n" + 
             // "Format: " + result.format + "\n" + 
             //"Cancelled: " + result.cancelled
 
@@ -67,18 +70,20 @@ var app = {
                 "text: " + result.text); //+ "\n" +
                 //"format: " + result.format + "\n" +
                 //"cancelled: " + result.cancelled + "\n"
-            document.getElementById("info").innerHTML = result.text;
+            // document.getElementById("info").innerHTML = result.text;
             console.log(result);
             /*
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
             */
-
+            localStorage.setItem('callback_url',result.text);
+            resolveScanning();
         }, function (error) { 
             console.log("Scanning failed: ", error);
             console.log("scanning", scanner); 
         } );
+        if (run !== 'undefined') {return scanner.scan(result);}
     },
 
     encode: function() {

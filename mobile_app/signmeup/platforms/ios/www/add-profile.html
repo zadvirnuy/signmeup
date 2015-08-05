@@ -45,13 +45,41 @@
 							<label>Password</label>
 							<input type="password" name="password" placeholder="Enter your password" />
 						</li>
-						<li class="clearfix">
+						<!-- <li class="clearfix">
 							<label>Password Confirmation</label>
-							<input type="password_confirmation" name="password_confirmation" placeholder="Confirm password" />
-						</li>
-						<li class="clearfix">
+							<input type="password" name="password_confirmation" placeholder="Confirm password" />
+						</li> -->
+						<!-- <li class="clearfix">
 							<label>Date of Birth</label>
 							<input type="text" name="date_of_birth" placeholder="DD/MM/YYYY (optional field)" />
+						</li> -->
+						<li class="clearfix">
+							<label>City</label>
+							<input type="text" name="city" placeholder="Your city (optional field)" />
+						</li>
+						<!-- <li class="clearfix">
+							<label>Street</label>
+							<input type="text" name="address" placeholder="Your street" />
+						</li> -->
+						<li class="clearfix">
+							<label>State</label>
+							<input type="text" name="state" placeholder="Your state (optional field)" />
+						</li>
+						<li class="clearfix">
+							<label>Birth town</label>
+							<input type="text" name="birth_town" placeholder="Your native city (optional field)" />
+						</li>
+						<li class="clearfix">
+							<label>Zip</label>
+							<input type="number" name="zip_code" placeholder="70000 (optional field)" />
+						</li>
+						<li class="clearfix">
+							<label>Mobile number</label>
+							<input type="text" name="mobile_phone" placeholder="+41********* (optional field)" />
+						</li>
+						<li class="clearfix">
+							<label>Nationality</label>
+							<input type="text" name="nationality" placeholder="Swiss (optional field)" />
 						</li>
 						<li class="clearfix">
 							<label>Country</label>
@@ -338,48 +366,39 @@
       function addProfile() {
 
       	var params = $('#content form').serialize();
-      	//
-      	var server = 'http://signmeup.gg' ; //'http://signmeup.gg' http://192.168.4.47:3000
+        params += '&access_token=' + localStorage.getItem('access_token');
+      	var server = 'http://signmeup.gg' ; //'http://192.168.4.47:3001'
       	current_user = localStorage.getItem('current_user');
-	      token = localStorage.getItem('token');
-	      params.token = token;
+	      // token = localStorage.getItem('token');
+	      // params.token = token;
+	      var url = server + '/api/v1/users/' + current_user + '/profiles.json';
+      	console.log('url', url);
+      	
+      	console.log('params', params);
+      	// alert("tp1");
       	$.ajax({
-      		url: server + '/api/v1/users/' + current_user + '/profiles',
+      		url: url,
+      		dataType: 'JSON',
       		data: params,
       		method: 'POST',
-      		// dataType: 'JSON',
       		success: function(data) {
+      			console.log('data:', data);
       			alert('request successed');
       			if (data.result == 'success') {
-      				alert('You added new profile'); 
-	            window.location.href = "select-profile.html";
-	            console.log(result);
+	            // window.location.href = "select-profile.html";
+	            console.log('result:', data.result);
+		        	alert('You added new profile');
 		        } 
-		        return false;   
+		        // return false;   
       		},
-      		// statusCode: {
-      		// 	404:function(){
-      		// 		alert(404);
-      		// 	},
-      		// 	500:function(){
-      		// 		alert(500);
-      		// 	},
-      		// 	302:function(){
-      		// 		alert(302);
-      		// 	},
-      		// 	406:function(){
-      		// 		alert(406);
-      		// 	},
-      		// 	301:function(){
-      		// 		alert(301);
-      		// 	},
+      		// error: function(xhr, status, error) { 
+      		// 	console.log('xhr:', xhr);
+      		// 	console.log('status:', status);
+      		// 	console.log('error:', error);
+      		// 	alert('error');
+      		// 	// console.error("An error occurred:", error);
+      		// 	// window.location.href = "select-profile.html";
       		// },
-      		error: function(xhr, status, error) { 
-      			alert('error');
-      			console.info(result);
-      			console.error("An error occurred:", error);
-      			window.location.href = "select-profile.html";
-      		},
       		// complete: function(xhr) {
       		// 	alert('got responce');  
       		// },
