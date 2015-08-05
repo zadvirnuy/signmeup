@@ -30,7 +30,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('encode').addEventListener('click', this.encode, false);
+        // document.getElementById('encode').addEventListener('click', this.encode, false);
     },
 
     // deviceready Event Handler
@@ -69,7 +69,7 @@ var app = {
            console.log("Scanner result: \n" +
                 "text: " + result.text); //+ "\n" +
                 //"format: " + result.format + "\n" +
-                //"cancelled: " + result.cancelled + "\n"
+             //   "cancelled: " + result.cancelled + "\n"
             // document.getElementById("info").innerHTML = result.text;
             console.log(result);
             /*
@@ -83,19 +83,19 @@ var app = {
             console.log("Scanning failed: ", error);
             console.log("scanning", scanner); 
         } );
-        if (run !== 'undefined') {return scanner.scan(result);}
+        //if (run !== 'undefined') {return scanner.scan(result);}
     },
 
-    encode: function() {
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+    // encode: function() {
+    //     var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
-            alert("encode success: " + success);
-          }, function(fail) {
-            alert("encoding failed: " + fail);
-          }
-        );
+    //     scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
+    //         alert("encode success: " + success);
+    //       }, function(fail) {
+    //         alert("encoding failed: " + fail);
+    //       }
+    //     );
 
-    }
+    // }
 
 };

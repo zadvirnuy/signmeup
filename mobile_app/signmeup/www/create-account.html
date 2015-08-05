@@ -331,7 +331,7 @@
       		success: function(resp) {
       			 localStorage.setItem('current_user', resp.user.id);
       			 localStorage.setItem('access_token', resp.user.authentication_token);
-             window.location.href = "registered.html"; 
+             window.location.href = "sign-in.html"; 
              alert('Your account successfully registered');
       		},
       		error: function() { alert('Be sure to feel all necessary fields');}
