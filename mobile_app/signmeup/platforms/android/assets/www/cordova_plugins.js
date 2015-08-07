@@ -25,6 +25,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-touchid/www/touchid.js",
+        "id": "cordova-plugin-touchid.TouchID",
+        "clobbers": [
+            "touchid"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -32,7 +39,8 @@ module.exports.metadata =
 {
     "com.phonegap.plugins.barcodescanner": "2.0.1",
     "cordova-plugin-whitelist": "1.0.0",
-    "cordova-plugin-dialogs": "1.1.1"
+    "cordova-plugin-dialogs": "1.1.1",
+    "cordova-plugin-touchid": "0.3.0"
 }
 // BOTTOM OF METADATA
 });

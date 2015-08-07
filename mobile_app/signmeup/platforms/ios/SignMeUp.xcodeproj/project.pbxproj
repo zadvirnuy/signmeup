@@ -49,6 +49,9 @@
 		49418DDFC3504926B4037180 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8729E3A4104F3CA04758AC /* CDVNotification.m */; };
 		70FA9355704948BCA30E2E7D /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A3F0AB7FDB4E48BF8BDBBF28 /* CDVNotification.bundle */; };
 		286A59CFB6414ADD9AE49C0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD000C836CFE4D34A788D28B /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B24EA0EECC5140AB9BE0E7AC /* TouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C35C015AB9B40FDB16158FE /* TouchID.m */; };
+		959E71F6795A4EE9A0057C41 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3737DBA5C84088B0E530DB /* LocalAuthentication.framework */; };
+		5EBD57EC0E604EDBB287BDE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222DDB9B63EB47038F144D39 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,10 @@
 		F187A60759B24919BC8A7A6C /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		A3F0AB7FDB4E48BF8BDBBF28 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
 		FD000C836CFE4D34A788D28B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		0C35C015AB9B40FDB16158FE /* TouchID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "TouchID.m"; path = "cordova-plugin-touchid/TouchID.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B6AAE21557F143B5AA36594A /* TouchID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TouchID.h"; path = "cordova-plugin-touchid/TouchID.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		0E3737DBA5C84088B0E530DB /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "LocalAuthentication.framework"; path = "System/Library/Frameworks/LocalAuthentication.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		222DDB9B63EB47038F144D39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,8 @@
 				D2B637F89C49439CBE043A64 /* CoreVideo.framework in Frameworks */,
 				D3F051797B804712B96BA81C /* QuartzCore.framework in Frameworks */,
 				286A59CFB6414ADD9AE49C0D /* AudioToolbox.framework in Frameworks */,
+				959E71F6795A4EE9A0057C41 /* LocalAuthentication.framework in Frameworks */,
+				5EBD57EC0E604EDBB287BDE2 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +228,8 @@
 				5599F76D12994488B4EF29EC /* CoreVideo.framework */,
 				B874D4D8FA4945AD96562C41 /* QuartzCore.framework */,
 				FD000C836CFE4D34A788D28B /* AudioToolbox.framework */,
+				0E3737DBA5C84088B0E530DB /* LocalAuthentication.framework */,
+				222DDB9B63EB47038F144D39 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,6 +250,8 @@
 				C113FE84773F49FF842666F8 /* zxing-all-in-one.h */,
 				FA8729E3A4104F3CA04758AC /* CDVNotification.m */,
 				F187A60759B24919BC8A7A6C /* CDVNotification.h */,
+				0C35C015AB9B40FDB16158FE /* TouchID.m */,
+				B6AAE21557F143B5AA36594A /* TouchID.h */,
 			);
 			name = Plugins;
 			path = SignMeUp/Plugins;
@@ -433,6 +446,7 @@
 				9C89AAFC5F034672AB81BFE2 /* CDVBarcodeScanner.mm in Sources */,
 				29EC7EEC84D742C98D6C2DF1 /* zxing-all-in-one.cpp in Sources */,
 				49418DDFC3504926B4037180 /* CDVNotification.m in Sources */,
+				B24EA0EECC5140AB9BE0E7AC /* TouchID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

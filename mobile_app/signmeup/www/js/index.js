@@ -33,13 +33,23 @@ var app = {
         // document.getElementById('encode').addEventListener('click', this.encode, false);
     },
 
+    9242ea15b035a6d3f897dad5c62260e43c3c0771
+    9242ea15b035a6d3f897dad5c62260e43c3c0771
+
     // deviceready Event Handler
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
-        // window.new_alert = window.navigator.notification.alert;
+        alert('deviceready');
+        window.new_alert = window.navigator.notification.alert;
         app.receivedEvent('deviceready');
+        console.log('trying to initialize touchid ..');
+        window.touchid.authenticate(
+          function() { alert('success'); },
+          function() { alert('error'); },
+          "Please provide you fingerprint to athenticate"
+        );
     },
 
     // Update DOM on a Received Event

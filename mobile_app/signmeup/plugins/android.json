@@ -548,6 +548,9 @@
         },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.perfectial.SignMeUp"
+        },
+        "cordova-plugin-touchid": {
+            "PACKAGE_NAME": "com.perfectial.SignMeUp"
         }
     },
     "dependent_plugins": {}
