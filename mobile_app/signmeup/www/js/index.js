@@ -21,6 +21,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        console.log('app.initialize');
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -29,27 +30,43 @@ var app = {
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.getElementById('scan').addEventListener('click', this.scan, false);
+        if ($('#scan').length > 0) {
+          $('#scan').on('click', this.scan);
+        }
         // document.getElementById('encode').addEventListener('click', this.encode, false);
+        
     },
 
-    9242ea15b035a6d3f897dad5c62260e43c3c0771
-    9242ea15b035a6d3f897dad5c62260e43c3c0771
+    // 9242ea15b035a6d3f897dad5c62260e43c3c0771
+    // 9242ea15b035a6d3f897dad5c62260e43c3c0771
 
     // deviceready Event Handler
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
-        alert('deviceready');
+        //alert('deviceready'); 
+        console.error(this);
         window.new_alert = window.navigator.notification.alert;
+        window.touchid.checkSupport( 
+          function() {
+            console.log('touchID supported');    
+            var result = window.touchid.authenticate(
+              function() { new_alert('matched', null, 'Checking fingerprint','GO'); },
+              function() { new_alert('not matched',null,'Checking fingerprint','CLOSE'); },
+              "Please provide your fingerprint to athenticate"
+            );
+            console.log(result);
+          },
+          function() {
+             console.error('touchID is not supported');
+        });    
         app.receivedEvent('deviceready');
-        console.log('trying to initialize touchid ..');
-        window.touchid.authenticate(
-          function() { alert('success'); },
-          function() { alert('error'); },
-          "Please provide you fingerprint to athenticate"
-        );
+       
+    },
+
+    initTouchID: function() {
+    
     },
 
     // Update DOM on a Received Event
@@ -109,3 +126,6 @@ var app = {
     // }
 
 };
+
+
+
